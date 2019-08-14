@@ -951,7 +951,7 @@ class Conekta_Prestashop extends PaymentModule
         $shp_price        = (string) $cart->getTotalShippingCost() * 100;
         $shp_carrier      = "other";
         $shp_service      = "other";
-        $discounts        = $cart->getDiscounts();
+        $discounts        = $cart->getCartRules();
         $items            = $cart->getProducts();
 
         if (isset($carrier)) {

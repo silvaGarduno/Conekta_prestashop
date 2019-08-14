@@ -76,8 +76,8 @@ class Config
             foreach ($discounts as $discount) {
                 $discount_lines = array_merge($discount_lines, array(
                     array(
-                        'code'   => $discount['code'],
-                        'amount' => (string) $cart->getOrderTotal(true, Cart::ONLY_DISCOUNTS) * 100,
+                        'code'   => (string) $discount['name'],
+                        'amount' => (string) $discount['value_real'] * 100,
                         'type'   => 'coupon'
                         )
                     ));
